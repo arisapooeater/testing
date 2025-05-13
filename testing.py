@@ -29,8 +29,8 @@ ev3.speaker.beep()
 
 # The robot drives up so its facing the red obstacle
 robot.straight(200)
-robot.turn(107)
-robot.straight(595)
+robot.turn(100)
+robot.straight(590)
 robot.turn(107)
 
 while True:
@@ -49,8 +49,8 @@ if colour_sensor.color() == Color.RED:
    # Its screen displays "RED Detected! :3"
    ev3.screen.clear()
    ev3.screen.draw_text(40, 50, "RED Detected! :3")
-   robot.straight(120)
-   robot.turn(196)    
+   robot.straight(100)
+   robot.turn(300)    
    # Robot going back to start area
    robot.straight(200)
    robot.turn(-107)
@@ -58,9 +58,18 @@ if colour_sensor.color() == Color.RED:
    robot.turn(-107)
    robot.straight(200)
 
+robot.straight(100)
+robot.turn(190)    
+# Robot going back to start area
+robot.straight(190)
+robot.turn(-100)
+robot.straight(590)
+robot.turn(-107)
+robot.straight(160)
+
 # The robot drives up so its facing the yellow obstacle
-robot.straight(200)
-robot.turn(107)
+robot.straight(-160)
+robot.turn(-107)
 robot.straight(670)
 robot.turn(107)
 robot.straight(450)
@@ -83,6 +92,7 @@ if colour_sensor.color() == Color.YELLOW:
    ev3.screen.clear()
    ev3.screen.draw_text(40, 50, "YELLOW Detected! :3")
    # Robot going back to start area
-   robot.straight(500)
-   robot.turn(-107)
-   robot.straight(200)
+   
+robot.straight(500)
+robot.turn(-107)
+robot.straight(200)
