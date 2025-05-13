@@ -38,7 +38,7 @@ def autodrive():
             # The robot's screen displays that the floor is white (non-functional)
             ev3.screen.draw_text(20, 50, "w w waitt.. the floor MIGHT be white. heh.")
             wait(3000)
-         # The robot's screend displays "Obstacle Detected!""
+         # The robot's screen displays "Obstacle Detected!""
          ev3.screen.clear()
          ev3.screen.draw_text(20, 50, "Obstacle Detected!")
 
