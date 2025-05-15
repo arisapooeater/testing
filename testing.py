@@ -33,7 +33,7 @@ def autodrive():
        # Once it detects an obstacle within 10 cm
       if obstacle_sensor.distance() < 100:
          robot.stop()
-         if colour_sensor.color() == 6: # Colour sensor detects the floor is white
+         if colour_sensor.reflection() > 50: # Colour sensor detects the floor is white (white reflects around 60-100 but the sheet is kind of off-white )
             ev3.screen.clear()
             # The robot's screen displays that the floor is white (non-functional)
             ev3.screen.draw_text(20, 50, "w w waitt.. the floor MIGHT be white. heh.")
@@ -74,4 +74,4 @@ move_path(200, 107, 670, 107, 450, 107)
 autodrive()
 
 # Robot going back to start area
-move_path(500, -107, 200, 0, 0, 0)
+move_path(500, 107, 200, 0, 0, 0)
