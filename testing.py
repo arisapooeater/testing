@@ -47,7 +47,7 @@ def move_path(forward1, turn1, forward2, turn2, forward3, turn3):
    robot.turn(turn1)
    robot.straight(forward2)
    robot.turn(turn2)
-   robot.forward(forward3)
+   robot.straight(forward3)
    robot.turn(turn3)
 
 # <-------------------------------------- PROGRAM -------------------------------------->
@@ -65,7 +65,7 @@ autodrive()
 move_path(120, 196, 0, 0, 0, 0) 
 
 # Robot going back to start area
-move_path(200, -107, 595, -107, 200, 0)
+move_path(200, -90, 595, -107, 200, 0)
 
 # The robot drives up so it's facing the yellow obstacle
 move_path(200, 107, 670, 107, 450, 107)
